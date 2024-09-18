@@ -1,0 +1,55 @@
+﻿<Window x:Class="Program.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="laba_1" Height="300" Width="550">
+    <Grid VerticalAlignment="Center" Margin="0 0 0 30">
+        
+        <Label Content="Array X:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBox Name="textBoxX" FontSize="14" HorizontalAlignment="Left" Height="25" Margin="80,15,0,0" VerticalAlignment="Top" Width="400"/>
+
+        <Label Content="Array Y:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <TextBox Name="textBoxY" FontSize="14" HorizontalAlignment="Left" Height="25" Margin="80,55,0,0" VerticalAlignment="Top" Width="400"/>
+
+        <Button Content="Calculate" FontSize="18" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="35" Margin="10,98,0,0" Click="buttonCalculate_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border CornerRadius="20" Background="DimGray" x:Name="border">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="DarkGray"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.95" ScaleY="0.95" CenterX="55" CenterY="20"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>    
+        </Button>
+        
+        <Label Content="Result:" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,145,0,0"/>
+        <TextBox Name="textBoxResult" FontSize="14" HorizontalAlignment="Left" Height="25" Margin="80,150,0,0" VerticalAlignment="Top" Width="400" IsReadOnly="True"/>
+        
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ScrollViewer x:Name="PART_ContentHost"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+    </Grid>
+</Window>
