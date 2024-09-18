@@ -17,3 +17,4 @@ F:\Programming\C#\Розподільні системи\laba_1\Program\Program\o
 F:\Programming\C#\Розподільні системи\laba_1\Program\Program\obj\Debug\net8.0-windows\Program.pdb
 F:\Programming\C#\Розподільні системи\laba_1\Program\Program\obj\Debug\net8.0-windows\Program.genruntimeconfig.cache
 F:\Programming\C#\Розподільні системи\laba_1\Program\Program\obj\Debug\net8.0-windows\ref\Program.dll
+F:\Programming\C#\Розподільні системи\laba_1\Program\Program\obj\Debug\net8.0-windows\Program.sourcelink.json

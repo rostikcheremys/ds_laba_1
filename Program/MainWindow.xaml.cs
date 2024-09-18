@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
 
 namespace Program
 {
@@ -20,8 +21,8 @@ namespace Program
         {
             try
             {
-                x = textBoxX.Text.Split(',').Select(double.Parse).ToArray();
-                y = textBoxY.Text.Split(',').Select(double.Parse).ToArray();
+                x = textBoxX.Text.Split(',').Select(s => double.Parse(s, CultureInfo.InvariantCulture)).ToArray();
+                y = textBoxY.Text.Split(',').Select(s => double.Parse(s, CultureInfo.InvariantCulture)).ToArray();
 
                 if (x.Length != y.Length)
                 {
